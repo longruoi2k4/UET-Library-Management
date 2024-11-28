@@ -28,9 +28,13 @@ UET-Library-Management is a comprehensive library management system built using 
 
 ### Preview Images
 
-<img src='upload later' width='50%'>
+<img src='https://github.com/longruoi2k4/UET-Library-Management/blob/main/demo/loginScreen.png' width='50%'>
 
-<img src='upload later' width='50%'>
+<img src='https://github.com/longruoi2k4/UET-Library-Management/blob/main/demo/bookManage.png' width='50%'>
+
+<img src='https://github.com/longruoi2k4/UET-Library-Management/blob/main/demo/userManage.png' width='50%'>
+
+<img src='https://github.com/longruoi2k4/UET-Library-Management/blob/main/demo/historyBorrow.png' width='50%'>
 
 ## Tech
 
