@@ -20,7 +20,7 @@ UET-Library-Management is a comprehensive library management system built using 
 - **Return Books**: View and return borrowed books before the due date.
 - **History**: Access a history of returned books.
 - **Account Management**: Change credentials, delete the account, or recover forgotten passwords via OTP (sent to the user's email).
-- 
+
 ### Common Features
 - **OTP-Based Password Recovery**: Recover accounts through email OTP.
 - **Interactive UI**: JavaFX enhances user experience with smooth transitions and easy navigation.
