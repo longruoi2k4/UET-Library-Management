@@ -55,9 +55,6 @@ Technologies used in app are:
 
 4. Run the application from your preferred Java IDE.
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 
 ## License
 
