@@ -1,0 +1,187 @@
+.text-field {
+  -fx-font-family: "System"; /* Font chữ */
+  -fx-background-color: #d1f1fe;
+  -fx-background-radius: 10;
+  -fx-text-fill: grey;
+  -fx-font-size: 16px;
+  -fx-border-color: #AFDBF5; /* Màu viền */
+  -fx-border-width: 2px; /* Độ dày viền */
+  -fx-border-radius: 10; /* Độ dày viền */
+}
+
+.text-field:focused {
+      -fx-border-color: #AFDBF5; /* Màu viền */
+      -fx-border-width: 2px; /* Độ dày viền */
+      -fx-border-radius: 10; /* Độ dày viền */
+      -fx-background-color: #FFFFFF; /* Màu nền khi được chọn */
+}
+
+.label {
+   -fx-font-size: 15;
+   -fx-font-family: "System"; /* Font chữ */
+   -fx-font-weight: bold; /* Chữ in đậm */
+   -fx-text-fill: #2F4F4F !important;
+}
+.Text {
+   -fx-font-size: 15;
+   -fx-font-family: "System"; /* Font chữ */
+   -fx-font-weight: bold; /* Chữ in đậm */
+   -fx-text-fill: #2F4F4F !important;
+}
+
+.button {
+   -fx-border-width: 0;
+   -fx-font-size: 15;
+   -fx-font-family: "System"; /* Font chữ */
+   -fx-font-weight: bold; /* Chữ in đậm */
+   -fx-background-color: #0276fb;
+   -fx-background-radius: 10;
+   -fx-text-fill: #ffffff;
+}
+
+.button:hover {
+   -fx-background-color: #0061d5;
+   -fx-background-radius: 10;
+   -fx-text-fill: #ffffff;
+}
+.button:focused {
+   -fx-border-width: 0;
+   -fx-font-size: 15;
+   -fx-font-family: "System"; /* Font chữ */
+   -fx-font-weight: bold; /* Chữ in đậm */
+   -fx-background-color: #0276fb;
+   -fx-background-radius: 10;
+   -fx-text-fill: #ffffff;
+}
+.button:focused:hover {
+       -fx-background-color: #0061d5;
+       -fx-background-radius: 10;
+       -fx-text-fill: #ffffff;
+}
+.button:pressed {
+    -fx-scale-x: 1.1; /* Phóng to theo chiều ngang */
+    -fx-scale-y: 1.1; /* Phóng to theo chiều dọc */
+}
+
+.combo-box {
+  -fx-font-family: "System"; /* Font chữ */
+  -fx-background-color: #d1f1fe;
+  -fx-background-radius: 10;
+  -fx-text-fill: grey;
+  -fx-font-size: 16px;
+  -fx-border-color: #AFDBF5; /* Màu viền */
+  -fx-border-width: 2px; /* Độ dày viền */
+  -fx-border-radius: 10; /* Độ dày viền */
+}
+.combo-box:focused {
+      -fx-border-color: #AFDBF5; /* Màu viền */
+      -fx-border-width: 2px; /* Độ dày viền */
+      -fx-border-radius: 10; /* Độ dày viền */
+      -fx-background-color: #FFFFFF; /* Màu nền khi được chọn */
+}
+.date-picker {
+    -fx-background-color: transparent; /* Màu nền của DatePicker */
+    -fx-border-width: 0px; /* Độ dày viền */
+    -fx-text-fill: black; /* Màu chữ mặc định */
+    -fx-font-size: 14px; /* Cỡ chữ */
+    -fx-background-radius: 10;
+}
+.date-picker:focused {
+    -fx-background-color: transparent; /* Màu nền của DatePicker */
+    -fx-border-width: 0px; /* Độ dày viền */
+    -fx-text-fill: black; /* Màu chữ mặc định */
+    -fx-font-size: 14px; /* Cỡ chữ */
+    -fx-background-radius: 10;
+}
+.date-picker .arrow-button {
+    -fx-background-color: #d1f1fe; /* Màu nền của nút bấm */
+    -fx-background-radius: 5px; /* Bo góc nút bấm */
+      -fx-border-color: #AFDBF5; /* Màu viền */
+      -fx-border-width: 2px; /* Độ dày viền */
+      -fx-border-radius: 10; /* Độ dày viền */
+}
+
+.progress-bar {
+    -fx-background-color: #ffffff; /* Màu nền của ProgressBar */
+    -fx-background-radius: 5px; /* Bo góc nền */
+}
+
+.progress-bar .track {
+    -fx-background-color: #ffffff; /* Màu nền thanh nền (track) */
+    -fx-background-radius: 5px; /* Bo góc nền */
+}
+
+.progress-bar .bar {
+    -fx-background-color: #AFDBF5; /* Màu nền thanh nền (track) */
+    -fx-background-radius: 5px; /* Bo góc nền */
+}
+
+
+.table-view .scroll-bar:horizontal {
+    -fx-opacity: 0; /* Ẩn thanh cuộn ngang */
+    -fx-pref-height: 0; /* Đặt chiều cao thanh cuộn ngang bằng 0 */
+}
+
+.table-view {
+    -fx-font-family: "System"; /* Font chữ */
+    -fx-font-size: 14px; /* Cỡ chữ */
+    -fx-background-radius: 15;
+    -fx-background-color: white !important;
+    -fx-border-color: transparent !important;
+    -fx-table-cell-border-color: transparent; /* Xóa viền giữa các ô */
+}
+.table-view:focused {
+    -fx-border-color: transparent !important;
+}
+
+.table-view .cell {
+    -fx-background-color: transparent; /* Nền mặc định của ô */
+}
+
+.table-view .column-header {
+    -fx-background-color:  #f9f9f9 !important; /* Màu nền của tiêu đề */
+    -fx-border-width: 0px !important;
+    -fx-background-radius: 10px 10px 0 0 !important;
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #e6e6e6 !important; /* Màu nền khi hover qua hàng */
+    -fx-background-radius: 10;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #d1f1fe !important; /* Màu nền khi hover qua hàng */
+    -fx-background-radius: 10;
+}
+
+.table-view .table-row-cell:selected .cell {
+    -fx-border-color: transparent !important;
+}
+
+.list-view {
+    -fx-border-width: 0;
+    -fx-background-color: white;
+}
+
+.list-view .scroll-bar:horizontal {
+    -fx-opacity: 0;                /* Ẩn thanh cuộn ngang */
+}
+.list-view .list-cell {
+    -fx-background-color: #f9f9f6; /* Màu nền */
+    -fx-background-radius: 15;
+}
+.list-view .list-cell:hover {
+    -fx-background-color: #def4ff; /* Màu nền */
+}
+
+.list-view:focused {
+    -fx-border-width: 0;
+    -fx-background-insets: 0; /* Loại bỏ viền xung quanh ListView */
+    -fx-border-color: transparent; /* Tắt viền khi ListView được focus */
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: #c0e6ff !important;
+    -fx-background-radius: 15;
+     -fx-border-width: 0;
+}

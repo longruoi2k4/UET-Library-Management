@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="291.0" prefWidth="721.0" stylesheets="@../../../main.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library.controllers.AddBookCardController">
+  <children>
+      <Label layoutX="63.0" layoutY="69.0" text="Title:" />
+    <Button layoutX="247.0" layoutY="239.0" mnemonicParsing="false" onAction="#onAddBookCard" prefHeight="38.0" prefWidth="228.0" text="Add book" />
+    <TextField fx:id="txtQuantity" layoutX="438.0" layoutY="115.0" prefHeight="39.0" prefWidth="241.0" promptText="Enter number of book" />
+    <DatePicker fx:id="dpPublish" layoutX="441.0" layoutY="175.0" />
+      <TextField fx:id="txtAuthor" layoutX="103.0" layoutY="115.0" />
+      <TextField fx:id="txtBookName" layoutX="103.0" layoutY="60.0" />
+      <TextField fx:id="txtCategory" layoutX="103.0" layoutY="174.0" />
+      <TextField fx:id="txtIsbn" layoutX="441.0" layoutY="60.0" prefHeight="39.0" prefWidth="235.0" />
+      <Label layoutX="43.0" layoutY="124.0" text="Author:" />
+      <Label layoutX="29.0" layoutY="183.0" text="Category:" />
+      <Label layoutX="355.0" layoutY="124.0" text="Quantity:" />
+      <Label layoutX="341.0" layoutY="183.0" text="Publish Date:" />
+      <Label layoutX="388.0" layoutY="69.0" text="ISBN:" />
+      <Text layoutX="225.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Setup Information Book">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+  </children>
+</AnchorPane>

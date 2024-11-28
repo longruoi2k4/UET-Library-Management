@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="772.0" style="-fx-background-color: #ffffff;" stylesheets="@../../../main.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library.controllers.AddBookApiController">
+  <children>
+    <VBox prefHeight="628.0" prefWidth="772.0">
+      <children>
+        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="652.0">
+          <children>
+            <TextField fx:id="searchField" prefHeight="40.0" prefWidth="506.0" promptText="Search by Title Book" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="545.0" prefWidth="850.0" stylesheets="@../../../main.css">
+          <children>
+            <ListView fx:id="suggestList" prefHeight="500.0" prefWidth="636.0" />
+          </children>
+        </HBox>
+        <HBox prefHeight="34.0" prefWidth="850.0" />
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>

@@ -1,0 +1,154 @@
+@font-face {
+  src: url("Montserrat-SemiBold.ttf");
+}
+
+* {
+  -primary: #ffffff;
+  -secondary: #00008B;
+  -fill: #ADADAD;
+  -fx-font-family: "Montserrat SemiBold";
+  -fx-font-smoothing-type: gray;
+}
+
+.root {
+  -fx-background-color: -primary;
+  -fx-background-radius: 15 15 15 15;
+}
+
+
+.text-field {
+  -fx-background-color: #AFDBF5;
+  -fx-background-radius: 10;
+  -fx-text-fill: #555555; /* Màu chữ của TextField (màu đen) */
+  -fx-font-size: 16px; /* Kích thước chữ */
+  -fx-highlight-fill: #555555;
+}
+
+.button {
+  -fx-font-size: 16;
+  -fx-text-fill: #ffffff;
+  -fx-background-radius: 15;
+  -fx-background-color: -secondary;
+}
+
+.hyperlink {
+  -fx-cursor: hand;
+  -fx-font-size: 14;
+  -fx-text-fill: -fill;
+  -fx-border-color: transparent;
+}
+
+.check-box {
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 12;
+}
+
+.check-box .box {
+  -fx-background-color: -fill;
+}
+
+.check-box .mark {
+  -fx-shape: "M393.401,124.425L179.603,338.208c-15.832,15.835-41.514,15.835-57.361,0L11.878,227.836   c-15.838-15.835-15.838-41.52,0-57.358c15.841-15.841,41.521-15.841,57.355-0.006l81.698,81.699L336.037,67.064   c15.841-15.841,41.523-15.829,57.358,0C409.23,82.902,409.23,108.578,393.401,124.425z";
+  -fx-background-color: white;
+}
+
+.check-box:selected .box {
+  -fx-background-color: #009BFF;
+}
+
+.tab {
+  -fx-focus-color: transparent;
+  -fx-faint-focus-color: transparent;
+  -fx-background-color: -primary;
+  -fx-border-color: -primary;
+  -fx-border-width: 0px 0px 3px 0px;
+}
+
+.tab:selected {
+  -fx-border-color: -secondary;
+  -fx-border-width: 0px 0px 2.5px 0px;
+}
+
+.tab-label {
+  -fx-font-size: 16;
+  -fx-text-fill: #00008B;
+}
+
+.tab-header-background {
+  -fx-background-color: transparent;
+}
+
+.tab-down-button {
+  -fx-padding: 0;
+}
+
+.tab-down-button .arrow {
+  -fx-padding: 0;
+}
+
+.tab-pane .tab-header-area {
+  -fx-padding: 0 0 0 140;
+}
+
+.text-alredy {
+  -fx-font-size: 14;
+  -fx-fill: -fill;
+}
+
+/* Tạo nền trắng cho ComboBox và bo tròn 15px */
+.combo-box {
+  -fx-background-color: transparent; /* Nền trong suốt */
+  -fx-border-color: #2196F3; /* Màu xanh blue cho viền */
+  -fx-border-radius: 15px; /* Bo tròn viền */
+  -fx-background-radius: 15px; /* Bo tròn nền */
+  -fx-border-width: 2px; /* Độ dày của đường viền */
+  -fx-padding: 5px;
+}
+
+/* Màu nền khi rê chuột vào ComboBox */
+.combo-box:hover {
+  -fx-background-color: #e3f2fd; /* Màu nền nhạt khi hover */
+}
+
+/* Màu chữ trong ComboBox */
+.combo-box .text {
+  -fx-background-color: transparent;
+  -fx-text-fill: black;
+  -fx-font-size: 16;
+}
+
+/* Tùy chỉnh màu của dropdown khi mở */
+.combo-box .list-cell {
+  -fx-background-color: transparent; /* Nền trong suốt */
+  -fx-text-fill: black; /* Chữ màu xanh blue */
+  -fx-border-radius: 15px; /* Bo tròn các mục trong dropdown */
+}
+
+/* Hiển thị chữ đậm khi rê chuột vào mục trong dropdown */
+.combo-box .list-cell:hover {
+  -fx-font-weight: bold; /* Chữ in đậm */
+  -fx-background-color: #e3f2fd; /* Nền xanh nhạt khi hover */
+}
+
+/* Tùy chỉnh màu khi item được chọn trong dropdown */
+.combo-box .list-cell:filled:selected {
+  -fx-font-size: 14;
+  -fx-text-fill: #2196F3; /* Chữ đen khi item được chọn */
+  -fx-font-weight: bold; /* Chữ in đậm khi được chọn */
+  -fx-background-color: transparent; /* Nền trắng khi chọn */
+}
+
+.label {
+  /* Chỉnh font chữ */
+  -fx-font-size: 16px; /* Chỉnh kích thước chữ */
+}
+
+.rounded-image {
+  -fx-background-color: transparent; /* Nền trong suốt */
+  -fx-background-radius: 50%; /* Bo tròn toàn bộ */
+  -fx-border-radius: 50%; /* Bo viền */
+  -fx-border-color: #cccccc; /* Màu viền (nếu cần) */
+  -fx-border-width: 2; /* Độ dày viền (tuỳ chọn) */
+  -fx-background-insets: 0;
+  -fx-padding: 0;
+}
