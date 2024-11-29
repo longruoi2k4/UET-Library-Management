@@ -115,6 +115,7 @@ public class AccountServiceImpl implements IAccountService {
    * @param email the email address associated with the account whose password is to be reset
    * @throws Exception if the email is not found in the account repository
    */
+  @Override
   public void resetPassword(String email) throws Exception {
     Map<String, String> account = accountRepository.getAccountInfoByEmail(email);
 

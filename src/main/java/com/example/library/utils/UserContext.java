@@ -18,14 +18,14 @@ public class UserContext {
     this.readerId = readerId;
   }
 
-  private UserContext() {}
+  private UserContext() {} // ngan tao doi tuong tu ben ngoai lop
 
   /**
    * Provides a global point of access to the singleton instance of UserContext.
    *
    * @return the singleton instance of UserContext
    */
-  public static UserContext getInstance() {
+  public static UserContext getInstance() { //đảm bảo rằng chỉ có một đối tượng UserContext được tạo ra.
     if (instance == null) {
       instance = new UserContext();
     }
