@@ -26,7 +26,11 @@ UET-Library-Management is a comprehensive library management system built using 
 - **Interactive UI**: JavaFX enhances user experience with smooth transitions and easy navigation.
 - **MySQL Database**: Centralized storage for all user, book data.
 
-### Preview Images
+## UML Class Diagram
+
+<img src='https://github.com/longruoi2k4/UET-Library-Management/blob/main/demo/uml_class.png' width='125%'>
+
+## Preview Images
 
 <img src='https://github.com/longruoi2k4/UET-Library-Management/blob/main/demo/loginScreen.png' width='50%'>
 
