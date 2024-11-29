@@ -674,4 +674,33 @@ public class BookManagementController implements Initializable {
   public void onSearchByIsbn(ActionEvent event) throws IOException {
     App.setRootPop("AddBookApiFrm", "Add Book By API", false);
   }
+
+
+  public void onClickQrBook(ActionEvent event) {
+    String isbn = txtIsbn.getText();
+    String linkBook = GoogleBooksAPI.getLinkBookByIsbn(isbn);
+
+    try {
+      // Tiến hành hiển thị popup
+      FXMLLoader loader =
+              new FXMLLoader(getClass().getResource("/com/example/library/QrBook.fxml"));
+      Pane root = loader.load();
+      QrBookController controller = loader.getController();
+
+      // Gửi dữ liệu sang controller
+      controller.setBookData(linkBook);
+
+      // Tạo một Stage mới cho popup
+      Stage popupStage = new Stage();
+      popupStage.initModality(Modality.APPLICATION_MODAL);
+      popupStage.setTitle("Qr Book");
+      popupStage.setScene(new Scene(root));
+      popupStage.showAndWait();
+    } catch (IOException e) {
+      System.err.println("Error loading QrBook.fxml: " + e.getMessage());
+      e.printStackTrace();
+    }
+  }
+
+
 }

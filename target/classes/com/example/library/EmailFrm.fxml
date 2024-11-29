@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="240.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library.controllers.client.EmailController">
+  <children>
+    <Label layoutX="91.0" layoutY="110.0" text="Email:" />
+    <TextField fx:id="txtEmail" layoutX="156.0" layoutY="98.0" prefHeight="36.0" prefWidth="216.0" promptText="Enter your email..." />
+    <Text layoutX="134.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot password" wrappingWidth="216.0">
+      <font>
+        <Font name="System Bold" size="26.0" />
+      </font>
+    </Text>
+    <Button layoutX="191.0" layoutY="178.0" mnemonicParsing="false" onAction="#btnSubmit" prefHeight="36.0" prefWidth="103.0" text="Submit" />
+  </children>
+   <stylesheets>
+      <URL value="@../../../primer-light.css" />
+      <URL value="@../../../main.css" />
+   </stylesheets>
+</AnchorPane>

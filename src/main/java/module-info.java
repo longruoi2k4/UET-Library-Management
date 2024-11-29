@@ -7,6 +7,8 @@ module com.example.library {
   requires java.mail;
   requires com.google.gson;
   requires okhttp3;
+    requires com.google.zxing;
+  requires java.desktop;
 
   opens com.example.library to
       javafx.fxml;

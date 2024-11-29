@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="765.0" prefWidth="1080.0" styleClass="border-pane" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library.controllers.DashboardController">
+  <center>
+    <AnchorPane fx:id="pane" prefHeight="665.0" prefWidth="908.0" styleClass="anchor-pane" stylesheets="@../../../style.css" BorderPane.alignment="CENTER">
+      <opaqueInsets>
+        <Insets top="5.0" />
+      </opaqueInsets></AnchorPane>
+  </center>
+  <top>
+    <HBox prefHeight="85.0" prefWidth="1080.0" BorderPane.alignment="CENTER">
+      <children>
+        <ImageView fitHeight="71.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../img/logouet.png" />
+          </image>
+          <HBox.margin>
+            <Insets left="20.0" />
+          </HBox.margin>
+        </ImageView>
+        <Pane prefHeight="114.0" prefWidth="475.0" HBox.hgrow="ALWAYS" />
+        <HBox alignment="CENTER_RIGHT" prefHeight="85.0" prefWidth="799.0">
+          <children>
+            <Label fx:id="label" alignment="BASELINE_RIGHT" contentDisplay="TOP" prefHeight="54.0" prefWidth="514.0" text="UserName" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="29.0" />
+              </font>
+            </Label>
+            <MenuButton contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="59.0" prefWidth="0.0" textFill="WHITE">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#onShowInformation" text="Information" />
+                <MenuItem mnemonicParsing="false" onAction="#onClickChangePassword" text="Change Password" />
+                <MenuItem mnemonicParsing="false" onAction="#onClickLogout" text="Log Out" />
+              </items>
+            </MenuButton>
+            <ImageView fitHeight="62.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../../../img/profile.png" />
+              </image>
+              <HBox.margin>
+                <Insets right="20.0" />
+              </HBox.margin>
+            </ImageView>
+          </children>
+        </HBox>
+      </children>
+    </HBox>
+  </top>
+  <left>
+    <VBox prefHeight="781.0" prefWidth="157.0" BorderPane.alignment="CENTER">
+      <children>
+        <ListView fx:id="lstMenu" onMouseClicked="#onSelected" prefHeight="655.0" prefWidth="271.0" stylesheets="@../../../style.css">
+          <VBox.margin>
+            <Insets left="5.0" top="10.0" />
+          </VBox.margin></ListView>
+      </children>
+    </VBox>
+  </left>
+  <stylesheets>
+    <URL value="@../../../primer-light.css" />
+    <URL value="@../../../style.css" />
+  </stylesheets>
+  <right>
+    <VBox prefHeight="665.0" prefWidth="15.0" BorderPane.alignment="CENTER" />
+  </right>
+  <bottom>
+    <HBox prefHeight="15.0" prefWidth="1080.0" BorderPane.alignment="CENTER" />
+  </bottom>
+</BorderPane>

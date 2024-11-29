@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+  minWidth="-Infinity" prefHeight="606.0" prefWidth="931.0"
+  style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17.0.12"
+  xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.example.library.controllers.LoginController">
+  <children>
+    <AnchorPane layoutX="437.0" layoutY="15.0" prefHeight="576.0" prefWidth="480.0"
+      style="-fx-background-color: white; -fx-background-radius: 20;"
+      stylesheets="@../../../login.css">
+      <children>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="97.0" prefWidth="480.0">
+          <children>
+            <ImageView fx:id="logo" fitHeight="123.0" fitWidth="333.0" pickOnBounds="true"
+              preserveRatio="true">
+              <image>
+                <Image url="@../../../img/logouet.png"/>
+              </image>
+              <HBox.margin>
+                <Insets top="5.0"/>
+              </HBox.margin>
+            </ImageView>
+          </children>
+        </HBox>
+        <TabPane fx:id="tabPane" layoutX="7.0" layoutY="122.0" prefHeight="455.0" prefWidth="480.0"
+          tabClosingPolicy="UNAVAILABLE">
+          <tabs>
+            <Tab text="SIGN IN">
+              <content>
+                <VBox alignment="CENTER" prefHeight="419.0" prefWidth="430.0" spacing="20.0">
+                  <children>
+                    <HBox prefHeight="45.0" prefWidth="315.0">
+                      <children>
+                        <Label prefHeight="45.0" prefWidth="135.0"
+                          style="-fx-background-color: transparent; -fx-font-size: 19px;"
+                          text="You are: ">
+                          <HBox.margin>
+                            <Insets left="20.0"/>
+                          </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="cbRole" prefHeight="44.0" prefWidth="253.0"
+                          stylesheets="@../../../login.css">
+                          <opaqueInsets>
+                            <Insets/>
+                          </opaqueInsets>
+                          <HBox.margin>
+                            <Insets right="20.0"/>
+                          </HBox.margin>
+                        </ComboBox>
+                      </children>
+                      <VBox.margin>
+                        <Insets top="-30.0"/>
+                      </VBox.margin>
+                    </HBox>
+                    <TextField fx:id="txtTaiKhoan" prefHeight="45.0" promptText="Username">
+                      <VBox.margin>
+                        <Insets/>
+                      </VBox.margin>
+                      <padding>
+                        <Insets left="20.0"/>
+                      </padding>
+                    </TextField>
+                    <PasswordField fx:id="pwMatKhau" prefHeight="45.0" promptText="Password">
+                      <padding>
+                        <Insets left="20.0"/>
+                      </padding>
+                    </PasswordField>
+                    <Button mnemonicParsing="false" onAction="#onClickLogin" prefHeight="45.0"
+                      prefWidth="390.0" text="SIGN IN"/>
+                    <Hyperlink onAction="#onClickResetPassword" text="Forgot Password?"/>
+                  </children>
+                  <padding>
+                    <Insets bottom="45.0" left="45.0" right="45.0" top="45.0"/>
+                  </padding>
+                </VBox>
+              </content>
+            </Tab>
+            <Tab text="SIGN UP">
+              <content>
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                  <children>
+                    <AnchorPane fx:id="pane" prefHeight="409.0" prefWidth="430.0"/>
+                  </children>
+                </VBox>
+              </content>
+            </Tab>
+          </tabs>
+          <padding>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="5.0"/>
+          </padding>
+        </TabPane>
+      </children>
+    </AnchorPane>
+    <ImageView fitHeight="606.0" fitWidth="458.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../img/banner_uet.png"/>
+      </image>
+    </ImageView>
+    <ImageView fitHeight="50.0" fitWidth="41.0" layoutX="396.0" layoutY="14.0"
+      onMouseClicked="#closeProgram" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../img/exit.png"/>
+      </image>
+    </ImageView>
+  </children>
+</AnchorPane>

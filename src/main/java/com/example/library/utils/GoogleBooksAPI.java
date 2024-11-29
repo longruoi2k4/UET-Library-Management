@@ -144,4 +144,36 @@ public class GoogleBooksAPI {
     }
     return bookDetails.isEmpty() ? List.of("No books found for keyword: " + keyword) : bookDetails;
   }
+
+  public static String getLinkBookByIsbn(String isbn) {
+    OkHttpClient client = new OkHttpClient();
+    String url = GOOGLE_BOOKS_API_BASE_URL + isbn;
+
+    Request request = new Request.Builder().url(url).build();
+
+    try (Response response = client.newCall(request).execute()) {
+      if (response.isSuccessful() && response.body() != null) {
+        String responseBody = response.body().string();
+        JsonObject json = JsonParser.parseString(responseBody).getAsJsonObject();
+
+        if (json.has("items")) {
+          JsonObject accessInfo = json.getAsJsonArray("items").get(0)
+                  .getAsJsonObject().getAsJsonObject("accessInfo");
+
+          // Lấy webReaderLink từ accessInfo
+          if (accessInfo.has("webReaderLink")) {
+            return accessInfo.get("webReaderLink").getAsString();
+          } else {
+            return "No webReaderLink found for ISBN: " + isbn;
+          }
+        } else {
+          return "No book found for ISBN: " + isbn;
+        }
+      } else {
+        return "Error: Unable to fetch book information. HTTP Code: " + response.code();
+      }
+    } catch (IOException e) {
+      return "Error: " + e.getMessage();
+    }
+  }
 }

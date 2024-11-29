@@ -1,5 +1,7 @@
 package com.example.library.services;
 
+import java.util.List;
+
 /**
  * Interface representing a service for retrieving statistical information
  * about books, readers, borrow transactions, and returns in a library system.
@@ -40,4 +42,6 @@ public interface IStaticService {
    * @return the total number of book returns.
    */
   int getTotalReturn();
+
+  List<String> getTop3MostBorrowedBooks();
 }

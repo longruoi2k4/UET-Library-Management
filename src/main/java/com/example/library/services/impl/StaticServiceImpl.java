@@ -6,6 +6,8 @@ import com.example.library.repositories.impl.BorrowRepositoryImpl;
 import com.example.library.repositories.impl.ReaderRepositoryImpl;
 import com.example.library.services.IStaticService;
 
+import java.util.List;
+
 /**
  * An implementation of the IStaticService interface that provides
  * methods to retrieve statistical information about books, readers,
@@ -54,4 +56,7 @@ public class StaticServiceImpl implements IStaticService {
   public int getTotalReturn() {
     return borrowRepository.getTotalReturn();
   }
+
+  @Override
+  public List<String> getTop3MostBorrowedBooks() { return borrowRepository.getTop3MostBorrowedBooks();}
 }

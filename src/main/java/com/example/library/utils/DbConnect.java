@@ -14,7 +14,7 @@ public class DbConnect { // singleton pattern
   private static DbConnect instance;
   private static final String JDBC_URL = "jdbc:mysql://localhost:3306/library";
   private static final String USERNAME = "root";
-  private static final String PASSWORD = "GvhFC]w5n1dMgwen";
+  private static final String PASSWORD = "123456";
 
   private Connection connection;
 

@@ -461,4 +461,49 @@ public class BorrowRepositoryImpl implements IBorrowRepository {
 
     dbConnect.executeUpdate(sql);
   }
+
+  @Override
+  public List<String> getTop3MostBorrowedBooks() {
+    // Truy vấn để lấy top 3 bookId được mượn nhiều nhất
+    String sqlTopBooks =
+            """
+                SELECT bookId 
+                FROM borrow            
+                GROUP BY bookId 
+                ORDER BY COUNT(bookId) DESC 
+                LIMIT 3;
+            """;
+
+    ResultSet rsTopBooks = dbConnect.executeQuery(sqlTopBooks);
+    List<String> topBookIds = new ArrayList<>();
+    try {
+      while (rsTopBooks.next()) {
+        topBookIds.add(rsTopBooks.getString("bookId"));
+      }
+    } catch (SQLException e) {
+      throw new RuntimeException(e);
+    }
+
+    // Truy vấn để lấy isbn từ bookId
+    List<String> topIsbns = new ArrayList<>();
+    for (String bookId : topBookIds) {
+      String sqlGetIsbn =
+              """
+                  SELECT isbn 
+                  FROM books
+                  WHERE bookId = '%s';
+              """.formatted(bookId);
+
+      ResultSet rsIsbn = dbConnect.executeQuery(sqlGetIsbn);
+      try {
+        if (rsIsbn.next()) {
+          topIsbns.add(rsIsbn.getString("isbn"));
+        }
+      } catch (SQLException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    return topIsbns;
+  }
 }

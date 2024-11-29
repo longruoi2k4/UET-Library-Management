@@ -1,0 +1,93 @@
+
+/* Xóa border của BorderPane */
+.border-pane {
+    -fx-background-radius: 15;
+    -fx-border-width: 0;
+    -fx-background-color: white;
+}
+
+/* Xóa border của các phần (top, bottom, left, right, center) */
+.border-pane > .top,
+.border-pane > .bottom,
+.border-pane > .left,
+.border-pane > .right,
+.border-pane > .center {
+    -fx-border-width: 0;
+}
+
+.list-view {
+    -fx-border-width: 0;
+    -fx-background-color: white;
+}
+
+.list-view .scroll-bar:horizontal {
+    -fx-opacity: 0;                /* Ẩn thanh cuộn ngang */
+}
+.list-view .list-cell {
+    -fx-text-fill: #2F4F4F;
+    -fx-font-family: "System"; /* Font chữ */
+    -fx-font-weight: bold; /* Font chữ */
+    -fx-font-size: 17 px; /* Cỡ chữ */
+    -fx-alignment: center-left; /* Căn lề trái */
+    -fx-background-color: white; /* Màu nền */
+    -fx-background-radius: 10;
+}
+.list-view:focused {
+    -fx-border-width: 0;
+    -fx-background-insets: 0; /* Loại bỏ viền xung quanh ListView */
+    -fx-border-color: transparent; /* Tắt viền khi ListView được focus */
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: #def4ff !important;
+    -fx-text-fill: #2F4F4F;
+    -fx-background-radius: 15 0 0 15;
+     -fx-border-width: 0;
+}
+
+.anchor-pane {
+    -fx-border-width: 0;
+    -fx-background-radius: 15;
+    -fx-background-color: #def4ff;  /* Gradient nền */
+}
+
+
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+.menu-button: focused {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+/* Tùy chỉnh MenuButton khi hover (di chuột vào) */
+.menu-button:hover {
+    -fx-background-radius: 10;
+    -fx-background-color: #def4ff;
+    -fx-border-width: 0;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+.menu-button:showing {
+    -fx-background-radius: 10;
+    -fx-background-color: #def4ff;
+    -fx-border-width: 0;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+.context-menu {
+    -fx-background-radius: 10px; /* Bo tròn nền menu */
+}
+
+
+/* Hiệu ứng khi hover vào MenuItem */
+.menu-item:hover {
+    -fx-background-color: #d1f1fe;   /* Màu nền khi hover vào MenuItem */
+    -fx-background-radius: 10;
+}
+.menu-item {
+    -fx-font-family: "System"; /* Font chữ */
+    -fx-font-weight: bold; /* Font chữ */
+    -fx-font-size: 15;
+}

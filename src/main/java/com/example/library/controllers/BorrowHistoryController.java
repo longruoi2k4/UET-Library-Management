@@ -2,6 +2,10 @@ package com.example.library.controllers;
 
 
 import com.example.library.models.Borrow;
+import com.example.library.repositories.IBookRepository;
+import com.example.library.repositories.IBorrowRepository;
+import com.example.library.repositories.impl.BookRepositoryImpl;
+import com.example.library.repositories.impl.BorrowRepositoryImpl;
 import com.example.library.services.IBorrowService;
 import com.example.library.services.impl.BorrowServiceImpl;
 import com.example.library.utils.UserContext;
@@ -41,7 +45,6 @@ public class BorrowHistoryController implements Initializable {
 
   @Setter private static String readerId;
   private final IBorrowService borrowService;
-
   /**
    * Controller responsible for managing the borrow history of users in the library application.
    */
@@ -53,9 +56,7 @@ public class BorrowHistoryController implements Initializable {
   public void initialize(URL url, ResourceBundle resourceBundle) {
     loadBorrows();
     initForReader();
-
     btnReturn.setVisible(false);
-
     log.info(String.format("From %s ReaderId: %s", this.getClass().getName(), readerId));
   }
 
@@ -76,7 +77,6 @@ public class BorrowHistoryController implements Initializable {
   private void initForReader() {
     if (UserContext.getInstance().getRole().equalsIgnoreCase("reader")) {
       btnReturn.setVisible(false);
-
       tbBorrows.setMinSize(847, 578);
     }
   }

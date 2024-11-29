@@ -160,4 +160,6 @@ public interface IBorrowRepository {
    *                 whose dates are to be updated
    */
   void updateBorrowDate(List<String> borrowId);
+
+  List<String> getTop3MostBorrowedBooks();
 }
